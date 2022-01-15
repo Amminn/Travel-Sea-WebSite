@@ -328,12 +328,12 @@ i {
     z-index: 20;
     opacity: 0.9;
     backdrop-filter: blur(90px);
-    /* transform: translateY(100%); */
+    transform: translateY(100%);
     transition: 0.3s ease;
 }
 
 .beach-data-wrapper:hover .beach-data {
-    /* transform: translateY(0%); */
+    transform: translateY(0%);
 }
 
 .beach-data-wrapper .btn {
@@ -343,8 +343,60 @@ i {
     align-items: center;
 }
 
+.beach-location i {
+    color: var(--accent-clr);
+    margin-right: 1rem;
+}
+
+.beach-location {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+/* --------------- */
+
+.plan-trip-data {
+    margin-bottom: 1rem;
+}
 
 /* Newsletter */
+
+.newsletter {
+    color: white;
+    text-align: center;
+    background-image: url("../images/newsletter-image.jpg");
+}
+
+.newsletter .tite {
+    margin-bottom: var(--gap-md);
+}
+
+.newsletter .description {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-light);
+}
+
+.newsletter .btn-group a{
+    display: block;
+    transition: 0.3s ease;
+}
+
+.newsletter .btn:hover {
+    color: var(--dark-clr);
+    background-color: rgb(211, 211, 211);
+
+}
+
+.newsletter .btn-light {
+    color: var(--dark-clr);
+    background-color: rgb(211, 211, 211);
+}
+
+.newsletter .btn-light:hover {
+    background-color: var(--accent-clr);
+    color: white;
+}
 
 /* Footer */
 
