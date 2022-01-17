@@ -326,14 +326,15 @@ i {
     left: 0;
     background-color: white;
     z-index: 20;
-    opacity: 0.9;
+    opacity: 0.85;
     backdrop-filter: blur(90px);
-    transform: translateY(100%);
+    transform: translateY(10%);
     transition: 0.3s ease;
 }
 
 .beach-data-wrapper:hover .beach-data {
     transform: translateY(0%);
+    opacity: 1;
 }
 
 .beach-data-wrapper .btn {
@@ -390,7 +391,7 @@ i {
 
 .newsletter .btn-light {
     color: var(--dark-clr);
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(233, 233, 233);
 }
 
 .newsletter .btn-light:hover {
@@ -408,6 +409,7 @@ i {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     text-align: left;
+    justify-content: center;
 }
 
 .footer-container > div {
@@ -421,12 +423,20 @@ i {
 
 .contact-information {
     /* margin-top: 1rem; */
-    grid-column: 1 / 2 span;
+    /* grid-column: 1 / 2 span; */
     text-align: left;
 }
 
 .contact-information .list {
     flex-direction: row;
+}
+
+.contact-information .list i {
+    transition: 0.3s ease;
+}
+
+.contact-information .list i:hover{
+    color: var(--accent-clr);
 }
 
 .contact-information address > *{
@@ -439,14 +449,69 @@ i {
 }
 
 .footer-seperator {
+    display: block;
     margin-bottom: var(--margin-md);
-    grid-column: 1 / -1;
     opacity: 0.2;
 }
 
 .copyright {
-    grid-column: 1 / -1;
+    grid-column: 1;
+    width: max-content;
     margin-bottom: var(--margin-sm);
+    text-align: center;
 }
 
 /* Media queries */
+
+@media screen and (min-width: 724px) {
+    .showcase-container,
+    .popular-descriptions-container,
+    .plan-trip-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .image-group {
+        height: unset;
+    }
+    .show-case .image-group .image-box {
+        height: 221px;
+    }
+    .showcase .image-box img {
+        height: 208px;
+    }
+    .btn {
+        width: fit-content;
+    }
+    .order-1 {
+        order: -1;
+    }
+
+    /* popular - destination */
+
+    .popular-descriptions-container {
+        gap: var(--gap-md)
+    }
+    .image-box-center {
+        grid-column: 1 / -1;
+    }
+
+    /* plan trip */
+
+    .plan-trip-container {
+        gap: var(--gap-md);
+    }
+
+    /* newsletter */
+
+    .btn-group {
+        display: flex;
+        justify-content: center;
+        gap: var(--gap-md);
+    }
+
+    /* footer  */
+}
