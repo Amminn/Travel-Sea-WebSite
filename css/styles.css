@@ -35,6 +35,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     /* 10 px */
     font-size:  62.5%;
 }
@@ -62,6 +63,10 @@ img {
 
 i {
     font-size: var(--margin-md)
+}
+
+.lg-screen-hidden {
+    display: none;
 }
 
 /* Reusable */
@@ -514,4 +519,35 @@ i {
     }
 
     /* footer  */
+
+}
+
+@media screen and (min-width: 1000px) {
+    .nav-mobile {
+        position: initial;
+        width: auto;
+        transform: translateY(0%);
+        z-index: 1;
+        background-color: var(--light-clr);
+    }
+    .nav-mobile .list {
+        flex-direction: row;
+    }
+    .nav-mobile .list-item {
+        padding-inline: 1rem;
+    }
+    .menu-toggle-icon {
+        display: none;
+    }
+    .lg-screen-hidden {
+        display: none;
+    }
+    .sm-screen-hidden {
+        display: block;
+    }
+    .btn.sm-screen-hidden {
+        color: white;
+        background-color: var(--accent-clr);
+        padding: 0.6rem 1.7rem;
+    }
 }
